@@ -1,0 +1,99 @@
+[
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": true,
+				"internalType": "address",
+				"name": "to",
+				"type": "address"
+			},
+			{
+				"indexed": false,
+				"internalType": "string",
+				"name": "ipfsHash",
+				"type": "string"
+			}
+		],
+		"name": "CertificateIssued",
+		"type": "event"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "_to",
+				"type": "address"
+			},
+			{
+				"internalType": "string",
+				"name": "_ipfsHash",
+				"type": "string"
+			}
+		],
+		"name": "issueCertificate",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "",
+				"type": "address"
+			},
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"name": "certificates",
+		"outputs": [
+			{
+				"internalType": "string",
+				"name": "ipfsHash",
+				"type": "string"
+			},
+			{
+				"internalType": "uint256",
+				"name": "issuedAt",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "_owner",
+				"type": "address"
+			}
+		],
+		"name": "getCertificates",
+		"outputs": [
+			{
+				"components": [
+					{
+						"internalType": "string",
+						"name": "ipfsHash",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "issuedAt",
+						"type": "uint256"
+					}
+				],
+				"internalType": "struct CertificateVerifier.Certificate[]",
+				"name": "",
+				"type": "tuple[]"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	}
+]
